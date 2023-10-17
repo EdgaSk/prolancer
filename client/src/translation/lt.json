@@ -1,0 +1,39 @@
+{
+  "english": "Anglų",
+  "lithuanian": "Lietuvių",
+  "homePage": "Pradžia",
+  "contactsPage": "Kontaktai",
+
+  "freelancer": "Darbuotojas",
+  "employer": "Darbdavys",
+  "reqRole": "Privalomas pasirinkimas",
+  "reqName": "Vardas yra privalomas",
+  "reqSurname": "Pavardė yra privaloma",
+  "reqEmail": "El. paštas yra privalomas",
+  "reqPassword": "Slaptažodis yra privalomas",
+  "reqrepeatPassword": "Slaptažodžiai turi sutapti",
+  "minCharacters": "Mažiausiai 5 simboliai",
+  "invalidEmail": "Neteisingas el. paštas",
+  "minPassword": "Slaptažodis turi būti bent 8 simbolių ilgio",
+  "matchesPassword": "Slaptažodis turi turėti bent vieną @$!%*?&, didžiąją ir mažąją raidę bei skaičių",
+  "matchPassword": "Slaptažodžiai turi sutapti",
+  "emailAlreadyExists": "Šis el. paštas jau naudojamas. Naudokite kitą el. pašto adresą.",
+
+  "registerTitle": "Registracija",
+  "name": "Vardas",
+  "yourName": "Tavo vardas",
+  "surname": "Pavardė",
+  "yourSurname": "Tavo pavardė",
+  "emailadress": "El. pašto adresas",
+  "youremail": "Tavo el. paštas",
+  "password": "Slaptažodis",
+  "yourpasword": "Tavo slaptažodis",
+  "repeatpasword": "Pakartoti slaptažodį",
+  "yourepeatpasword": "Pakartokite slaptažodį",
+  "registerBtn": "Registruotis",
+
+  "loginTitle": "Prisijungimas",
+  "loginBtn": "Prisijungti",
+
+  "labas": "Labas"
+}

@@ -1,0 +1,39 @@
+{
+  "english": "English",
+  "lithuanian": "Lithuanian",
+  "homePage": "Home",
+  "contactsPage": "Contacts",
+
+  "freelancer": "Freelancer",
+  "employer": "Employer",
+  "reqRole": "Role is required",
+  "reqName": "Name is required",
+  "reqSurname": "Surname is required",
+  "reqEmail": "Email is required",
+  "reqPassword": "Password is required",
+  "reqrepeatPassword": "Password must be repeated",
+  "minCharacters": "Minimum 5 characters",
+  "invalidEmail": "Invalid email",
+  "minPassword": "Password must have at least 8 characters",
+  "matchesPassword": "Password must have one @$!%*?&, uppercase and lowercase letter and number",
+  "matchPassword": "Passwords must match",
+  "emailAlreadyExists": "This email is already in use. Please use a different email.",
+
+  "registerTitle": "Register",
+  "name": "Name",
+  "yourName": "Your name",
+  "surname": "Surname",
+  "yourSurname": "Your surname",
+  "emailadress": "Email adress",
+  "youremail": "Your email",
+  "password": "Password",
+  "yourpasword": "Your password",
+  "repeatpasword": "Repeat password",
+  "yourepeatpasword": "Repeat your password",
+  "registerBtn": "Register",
+
+  "loginTitle": "Login",
+  "loginBtn": "Login",
+
+  "labas": "hello"
+}

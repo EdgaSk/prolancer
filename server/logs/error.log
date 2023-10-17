@@ -1,0 +1,16 @@
+20231014	14:12:57	892785ec-4444-4a4d-b1fb-e17cd2f6208d	Error: Not allowed by CORS
+20231016	12:07:50	3c5ecc30-1fa0-4f00-9201-75f204bf285c	TypeError: allowedOrigins.includes is not a function
+20231016	12:12:22	0dffd222-7e6b-4cde-95d0-3308f2b49bb1	TypeError: allowedOrigins.includes is not a function
+20231016	12:12:28	41389a1b-df77-4b83-9628-e84184da5dad	TypeError: allowedOrigins.includes is not a function
+20231016	12:12:29	be569f63-ee97-4506-84c9-45fd2d82837a	TypeError: allowedOrigins.includes is not a function
+20231016	12:19:20	4d0d1ad5-b565-4fc8-9685-139e257c3606	TypeError: allowedOrigins.indexOf is not a function
+20231016	12:23:00	77c2e0cc-d0bb-4abf-b6df-ed72017af2fe	TypeError: allowedOrigins.includes is not a function
+20231016	12:27:47	57c52915-77fa-428e-87b6-dd42a79295b9	TypeError: allowedOrigins.indexOf is not a function
+20231016	12:33:09	9a77a91a-b243-41e1-9084-76cc75df1388	TypeError: allowedOrigins.includes is not a function
+20231016	12:33:27	401060bb-b98e-4ed5-aba6-f0e99476cdbe	TypeError: allowedOrigins.includes is not a function
+20231016	12:34:53	d4021654-2be7-4549-bc60-caa41962bc11	TypeError: allowedOrigins.includes is not a function
+20231016	12:37:24	aefd8eea-0f9a-4850-8a92-99b9d6b1fda4	TypeError: allowedOrigins.includes is not a function
+20231016	12:38:07	7adda798-bbfa-4735-b180-400da8b0b304	TypeError: Cannot read properties of undefined (reading 'includes')
+20231016	12:40:39	3545bf56-1cb7-406a-9075-7a1d37537499	TypeError: Cannot read properties of undefined (reading 'includes')
+20231016	12:41:25	ca074c94-38dd-41d4-80aa-c424050be5b2	TypeError: allowedOrigins.includes is not a function
+20231016	13:22:29	9dcca665-7833-45ad-89ee-a55e996e268d	SyntaxError: Unexpected token e in JSON at position 0

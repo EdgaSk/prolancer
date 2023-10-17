@@ -1,0 +1,64 @@
+.formCointainer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  width: 100%;
+
+  input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #eaeaea;
+    color: var(--input-text);
+    font-size: 0.8rem;
+    &:focus {
+      outline: 1px solid var(--secondary-color);
+    }
+  }
+}
+
+.labelBox {
+  display: flex;
+  justify-content: space-between;
+  label {
+    display: flex;
+    margin-bottom: 2px;
+    color: black;
+    font-size: 0.8rem;
+    span {
+      color: #ec3535;
+    }
+  }
+}
+
+.error {
+  color: #ec3535;
+  font-size: 0.7rem;
+}
+
+.btnSubmit {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  padding: 10px 0;
+  margin-top: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--black-color);
+  }
+}
