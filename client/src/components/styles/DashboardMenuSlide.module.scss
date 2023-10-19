@@ -1,0 +1,52 @@
+.hamburgerIcon {
+  height: 30px;
+  width: 30px;
+}
+
+.mainCointainer {
+  display: flex;
+  flex-direction: column;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-light);
+    padding: 10px;
+    .closeCointainer {
+      display: flex;
+      width: 30px;
+      height: 30px;
+      align-items: center;
+      background-color: var(--light-green);
+      justify-content: center;
+      border-radius: 5px;
+      .closeBtn {
+        height: 20px;
+        width: 20px;
+        color: var(--secondary-color);
+      }
+    }
+  }
+
+  .logRegBox {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .linksCointainer {
+    display: flex;
+    border-bottom: 1px solid var(--border-light);
+    flex-direction: column;
+    padding: 25px 20px;
+    gap: 10px;
+    a {
+      text-decoration: none;
+      color: var(--black-color);
+      font-size: 0.9rem;
+    }
+  }
+}

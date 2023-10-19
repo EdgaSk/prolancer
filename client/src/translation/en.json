@@ -1,8 +1,13 @@
 {
   "english": "English",
   "lithuanian": "Lithuanian",
+
   "homePage": "Home",
   "contactsPage": "Contacts",
+  "dashboardPage": "Dashboard",
+  "submissionJobPage": "Submission Job",
+  "submissionServicesPage": "Submission Services",
+  "profilePage": "Profile",
 
   "freelancer": "Freelancer",
   "employer": "Employer",
@@ -38,7 +43,7 @@
 
   "roles": {
     "freelancer": "Freelancer",
-    "administrator": "Administrator",
+    "admin": "Administrator",
     "employer": "Employer"
   },
 

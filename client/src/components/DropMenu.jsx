@@ -48,7 +48,7 @@ const DropMenu = () => {
           </div>
           <div className={styles.linksCointainer}>
             {navLinks.map((link) => (
-              <NavLink href={link.path} key={link.path}>
+              <NavLink to={link.path} key={link.path}>
                 {t(link.nameKey)}
               </NavLink>
             ))}

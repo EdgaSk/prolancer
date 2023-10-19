@@ -1,8 +1,13 @@
 {
   "english": "Anglų",
   "lithuanian": "Lietuvių",
+
   "homePage": "Pradžia",
   "contactsPage": "Kontaktai",
+  "dashboardPage": "Darbastalis",
+  "submissionJobPage": "Pateikti darbo pasiūlymą",
+  "submissionServicesPage": "Pateikti paslaugų pasiūlymą",
+  "profilePage": "Profilis",
 
   "freelancer": "Darbuotojas",
   "employer": "Darbdavys",
@@ -38,7 +43,7 @@
 
   "roles": {
     "freelancer": "Darbuotojas",
-    "administrator": "Administratorius",
+    "admin": "Administratorius",
     "employer": "Darbdavys"
   },
 
