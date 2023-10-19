@@ -1,10 +1,14 @@
 import Drawer from "@mui/material/Drawer";
-import { BiMenu } from "react-icons/bi";
-import styles from "./styles/DropMenu.module.scss";
+import { BsArrowRightSquare } from "react-icons/bs";
+import styles from "./styles/DashboardMenuSlide.module.scss";
 import LangSwitcher from "./Langswitcher";
 import { AiOutlineClose } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
-import { dashBoardLinks } from "../routes/constRoutes";
+import {
+  dashBoardAdminLinks,
+  dashBoardFreelancerLinks,
+  dashBoardEmployerLinks,
+} from "../routes/constRoutes";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { useContext } from "react";
@@ -17,6 +21,40 @@ const DashboardMenuSlide = () => {
   const { t } = useTranslation();
   const { userData, accessToken } = useContext(UserContext);
   const [userDetails, setUserDetails] = useState(null);
+
+  const isFreelancer = userData.roles && userData.roles.freelancer;
+  const isEmployer = userData.roles && userData.roles.employer;
+  const isAdmin = userData.roles && userData.roles.admin;
+
+  const FreelancerDashboard = () => (
+    <>
+      {dashBoardFreelancerLinks.map((link) => (
+        <NavLink to={`/dashboard${link.path}`} key={link.path}>
+          {t(link.nameKey)}
+        </NavLink>
+      ))}
+    </>
+  );
+
+  const EmployerDashboard = () => (
+    <>
+      {dashBoardEmployerLinks.map((link) => (
+        <NavLink to={`/dashboard${link.path}`} key={link.path}>
+          {t(link.nameKey)}
+        </NavLink>
+      ))}
+    </>
+  );
+
+  const AdminDashboard = () => (
+    <>
+      {dashBoardAdminLinks.map((link) => (
+        <NavLink to={`/dashboard${link.path}`} key={link.path}>
+          {t(link.nameKey)}
+        </NavLink>
+      ))}
+    </>
+  );
 
   useEffect(() => {
     if (userData.userId && accessToken) {
@@ -46,7 +84,10 @@ const DashboardMenuSlide = () => {
 
   return (
     <div>
-      <BiMenu className={styles.hamburgerIcon} onClick={toggleDrawer(true)} />
+      <BsArrowRightSquare
+        className={styles.slideBtn}
+        onClick={toggleDrawer(true)}
+      />
       <Drawer
         anchor={"left"}
         open={open}
@@ -81,11 +122,9 @@ const DashboardMenuSlide = () => {
             </div>
           </div>
           <div className={styles.linksCointainer}>
-            {dashBoardLinks.map((link) => (
-              <NavLink to={`/dashboard${link.path}`} key={link.path}>
-                {t(link.nameKey)}
-              </NavLink>
-            ))}
+            {isFreelancer && <FreelancerDashboard />}
+            {isEmployer && <EmployerDashboard />}
+            {isAdmin && <AdminDashboard />}
           </div>
         </div>
       </Drawer>

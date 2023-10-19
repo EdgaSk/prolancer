@@ -1,0 +1,34 @@
+.cointainer {
+  display: flex;
+}
+
+.left {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  top: 60px;
+  bottom: 0;
+  width: 250px;
+  border-right: 1px solid var(--border-light);
+}
+
+.right {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  background-color: var(--background-grey);
+}
+
+@media screen and (min-width: 768px) {
+  .left {
+    display: flex;
+  }
+
+  .right {
+    margin-left: 250px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+}

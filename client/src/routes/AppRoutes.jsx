@@ -1,17 +1,19 @@
 import { useContext } from "react";
 import NavBar from "../components/NavBar";
 import { UserContext } from "../context/UserContext";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Footer from "../components/Footer";
 import { logInRoutes, logOutRoutes } from "../routes/constRoutes";
 import DashBoardRoutes from "./DashBoardRoutes";
 
 const AppRoutes = () => {
   const { isAuthenticated } = useContext(UserContext);
+  const location = useLocation(); // Initialize the location object
+  const isDashboardRoute = location.pathname.startsWith("/dashboard");
 
   return (
     <>
-      <header>
+      <header style={{ position: "sticky", top: 0, right: 0, left: 0 }}>
         <NavBar />
       </header>
       <main>
@@ -30,9 +32,11 @@ const AppRoutes = () => {
           </Routes>
         )}
       </main>
-      <footer>
-        <Footer />
-      </footer>
+      {isDashboardRoute ? null : (
+        <footer>
+          <Footer />
+        </footer>
+      )}
     </>
   );
 };

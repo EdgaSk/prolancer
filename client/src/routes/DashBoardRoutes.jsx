@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import styles from "./styles/DashBoardRoutes.module.scss";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../context/UserContext";
 import {
   adminDashBoard,
@@ -8,14 +8,28 @@ import {
   employerDashBoard,
 } from "../routes/constRoutes";
 import DashboardMenuSlide from "../components/DashboardMenuSlide";
+import Footer from "../components/Footer";
+import DashboardMenuFixed from "../components/DashboardMenuFixed";
 
 const Dashboard = () => {
   const { isAuthenticated, userData } = useContext(UserContext);
+  const [showdashmenu, setshowdashmenu] = useState(false);
   const isFreelancer =
     isAuthenticated && userData.roles && userData.roles.freelancer;
   const isEmployer =
     isAuthenticated && userData.roles && userData.roles.employer;
   const isAdmin = isAuthenticated && userData.roles && userData.roles.admin;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setshowdashmenu(window.innerWidth <= 768);
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const FreelancerDashboard = () => (
     <Routes>
@@ -43,13 +57,17 @@ const Dashboard = () => {
 
   return (
     <section className={styles.cointainer}>
-      <div>
-        <DashboardMenuSlide />
+      {showdashmenu && <DashboardMenuSlide />}
+      <div className={styles.left}>
+        <DashboardMenuFixed />
       </div>
-      <div>
+      <div className={styles.right}>
         {isFreelancer && <FreelancerDashboard />}
         {isEmployer && <EmployerDashboard />}
         {isAdmin && <AdminDashboard />}
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </section>
   );

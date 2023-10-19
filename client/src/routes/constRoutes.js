@@ -53,9 +53,21 @@ export const navLinks = [
   { path: CONTACTS_PATH, nameKey: "contactsPage" },
 ];
 
-export const dashBoardLinks = [
+export const dashBoardAdminLinks = [
   { path: DASHBOARD_PATH, nameKey: "dashboardPage" },
   { path: SUBMISSION_JOB_PATH, nameKey: "submissionJobPage" },
   { path: SUBMISSION_SERVICES_PATH, nameKey: "submissionServicesPage" },
+  { path: PROFILE_PATH, nameKey: "profilePage" },
+];
+
+export const dashBoardFreelancerLinks = [
+  { path: DASHBOARD_PATH, nameKey: "dashboardPage" },
+  { path: SUBMISSION_SERVICES_PATH, nameKey: "submissionServicesPage" },
+  { path: PROFILE_PATH, nameKey: "profilePage" },
+];
+
+export const dashBoardEmployerLinks = [
+  { path: DASHBOARD_PATH, nameKey: "dashboardPage" },
+  { path: SUBMISSION_JOB_PATH, nameKey: "submissionJobPage" },
   { path: PROFILE_PATH, nameKey: "profilePage" },
 ];
