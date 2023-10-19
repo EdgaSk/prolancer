@@ -36,5 +36,20 @@
   "loginBtn": "Login",
   "usernotfound": "User Not Found or wrong password",
 
-  "labas": "hello"
+  "roles": {
+    "freelancer": "Freelancer",
+    "administrator": "Administrator",
+    "employer": "Employer"
+  },
+
+  "heroTitle": "Find the perfect freelance services for your business",
+  "herosubTitle": "Work with talented people at the most affordable price to get the most out of your time and cost",
+  "trustedBy": "Trusted by",
+  "safeLabel": "Safe and Secure",
+  "proofLabel": "Proof of Quality",
+
+  "totalFreelancer": "Total Freelancers",
+  "positivereviews": "Positive Reviews",
+  "ordersrecieved": "Orders Recieved",
+  "projectCompleted": "Project Completed"
 }

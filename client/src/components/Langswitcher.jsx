@@ -21,7 +21,7 @@ const LangSwitcher = () => {
   };
 
   return (
-    <div>
+    <div className={styles.cointainer}>
       <button className={styles.button} onClick={toggleDropdown}>
         {selectedLang === "lt" ? (
           <img src="/ltu.png" alt="Lietuvių vėliava" />

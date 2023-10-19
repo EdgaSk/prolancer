@@ -36,5 +36,20 @@
   "loginBtn": "Prisijungti",
   "usernotfound": "Tokio vartojo nėra arba blogas slaptažodis",
 
-  "labas": "Labas"
+  "roles": {
+    "freelancer": "Darbuotojas",
+    "administrator": "Administratorius",
+    "employer": "Darbdavys"
+  },
+
+  "heroTitle": "Raskite tobulas paslaugas savo verslui",
+  "herosubTitle": "Dirbkite su talentingais žmonėmis už prieinamiausią kainą, kad maksimaliai išnaudotumėte savo laiką ir išlaidas",
+  "trustedBy": "Mumis pasitiki",
+  "safeLabel": "Saugu ir Patikima",
+  "proofLabel": "Kokybės Įrodymas",
+
+  "totalFreelancer": "Darbuotojų",
+  "positivereviews": "Teigiamų atsiliepimų",
+  "ordersrecieved": "Gautų užsakymų",
+  "projectCompleted": "Užbaiktų projektų"
 }

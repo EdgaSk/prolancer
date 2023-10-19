@@ -4,6 +4,7 @@ import { UserContext } from "../context/UserContext";
 import Home from "../pages/Home";
 import DashBoard from "../pages/Dashboard";
 import { Route, Routes } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const AppRoutes = () => {
   const { isAuthenticated } = useContext(UserContext);
@@ -24,6 +25,9 @@ const AppRoutes = () => {
           </Routes>
         )}
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };

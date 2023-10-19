@@ -12,20 +12,24 @@ const LogReg = () => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const { t } = useTranslation();
   const { isAuthenticated, userData, accessToken } = useContext(UserContext);
-  const [userName, setUserName] = useState("");
+  const [userDetails, setUserDetails] = useState(null);
 
   useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const user = await getUserbyID(userData.userId, accessToken);
-        setUserName(user.username);
-      } catch (error) {
-        console.error("Failed to fetch user:", error.message);
+    if (isAuthenticated) {
+      if (userData.userId && accessToken) {
+        getUserData(userData.userId, accessToken);
       }
-    };
-
-    fetchUser();
+    }
   }, [isAuthenticated, userData.userId, accessToken]);
+
+  const getUserData = async (userId, accessToken) => {
+    try {
+      const user = await getUserbyID(accessToken, userId);
+      setUserDetails(user);
+    } catch (error) {
+      console.error("Failed to fetch user data:", error);
+    }
+  };
 
   const handleOpenRegisterModal = () => {
     setIsRegisterModalOpen(true);
@@ -45,8 +49,20 @@ const LogReg = () => {
   return (
     <>
       {isAuthenticated ? (
-        <div>
-          <p>{userName}</p>
+        <div className={styles.logInuser}>
+          {userDetails && (
+            <div className={styles.userbox}>
+              <p className={styles.name}>
+                {userDetails.name}&nbsp;
+                {userDetails.surname}
+              </p>
+              <p>
+                {Object.keys(userDetails.roles).map((role, index) => (
+                  <span key={index}>{t(`roles.${role}`)}</span>
+                ))}
+              </p>
+            </div>
+          )}
         </div>
       ) : (
         <div className={styles.cointainerBtn}>
