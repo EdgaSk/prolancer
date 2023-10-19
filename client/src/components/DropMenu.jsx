@@ -7,6 +7,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
 import { navLinks } from "../routes/constRoutes";
 import { NavLink } from "react-router-dom";
+import LogReg from "./LogReg";
 
 const DropMenu = () => {
   const [open, setOpen] = React.useState(false);
@@ -41,6 +42,9 @@ const DropMenu = () => {
               />
             </div>
             <LangSwitcher />
+          </div>
+          <div className={styles.logRegBox}>
+            <LogReg />
           </div>
           <div className={styles.linksCointainer}>
             {navLinks.map((link) => (

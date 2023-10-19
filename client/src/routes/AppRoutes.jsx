@@ -16,6 +16,7 @@ const AppRoutes = () => {
         {isAuthenticated ? (
           <Routes>
             <Route path="/dashboard" element={<DashBoard />} />
+            <Route path="/" element={<Home />} />
           </Routes>
         ) : (
           <Routes>

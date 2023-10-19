@@ -11,10 +11,12 @@ import LogReg from "./LogReg";
 const NavBar = () => {
   const { t } = useTranslation();
   const [showLangswitcher, setShowLangswitcher] = useState(false);
+  const [showloginreg, setshowloginreg] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       setShowLangswitcher(window.innerWidth >= 768);
+      setshowloginreg(window.innerWidth >= 768);
     };
     window.addEventListener("resize", handleResize);
     handleResize();
@@ -45,7 +47,7 @@ const NavBar = () => {
         </div>
 
         {showLangswitcher && <Langswitcher />}
-        <LogReg />
+        {showloginreg && <LogReg />}
       </div>
     </nav>
   );

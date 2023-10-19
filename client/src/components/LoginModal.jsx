@@ -22,17 +22,26 @@ const initialValues = {
 const LogModal = ({ isOpen, handleClose }) => {
   const { t } = useTranslation();
   const validationSchema = registrationShemaYup(t);
-  const { setIsAuthenticated, updateUser } = useContext(UserContext);
+  const {
+    setIsAuthenticated,
+    updateUser,
+    updateUserRoles,
+    updateAccessToken,
+    updateRefreshToken,
+  } = useContext(UserContext);
 
   const handleSubmit = async (values, { setFieldError }) => {
     try {
       const response = await loginUser(values);
       if (response.success) {
         setIsAuthenticated(true);
-        updateUser(response.data);
+        updateUser(response.userId);
+        updateUserRoles(response.roles);
+        updateAccessToken(response.accessToken);
+        updateRefreshToken(response.refreshToken);
         handleClose();
       } else {
-        setFieldError("email", t("emailAlreadyExists"));
+        setFieldError("email", t("usernotfound"));
       }
     } catch (error) {
       console.error("Registration error:", error.message);

@@ -8,13 +8,19 @@ const resources = {
   lt: { translation: ltTranslations },
 };
 
+const defaultLanguage = localStorage.getItem("selectedLang") || "en";
+
 i18n.use(initReactI18next).init({
   resources,
-  lng: "en", // Numatyta kalba
-  fallbackLng: "en", // Naudojama, kai vartotojo kalba nepalaikoma
+  lng: defaultLanguage,
+  fallbackLng: "en",
   interpolation: {
-    escapeValue: false, // Reikia, jei tekste naudojamos reikšmės
+    escapeValue: false,
   },
+});
+
+i18n.on("languageChanged", (lang) => {
+  localStorage.setItem("selectedLang", lang);
 });
 
 export default i18n;

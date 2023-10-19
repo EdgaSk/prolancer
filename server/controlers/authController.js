@@ -26,19 +26,15 @@ const handleLogin = async (req, res) => {
     const validPassword = await bcrypt.compare(password, user.password);
 
     if (validPassword) {
-      const userRoles = Object.values(roles);
+      // const userRoles = Object.values(roles);
+      const userRoles = roles;
 
       const accessToken = jwt.sign(
-        { id: userId, roles: userRoles }, // Use User ID
+        // { id: userId, roles: userRoles }, // Use User ID
+        { id: userId, roles: userRoles },
         process.env.ACCESS_TOKEN_SECRET,
         { expiresIn: "1h" }
       );
-
-      // const accessToken = jwt.sign(
-      //   { id: userId }, // Use User ID
-      //   process.env.ACCESS_TOKEN_SECRET,
-      //   { expiresIn: "1h" }
-      // );
 
       const refreshToken = jwt.sign(
         { id: userId }, // Use User ID
@@ -52,9 +48,9 @@ const handleLogin = async (req, res) => {
         secure: false, // set to true if you're using https
       });
 
-      res.send({ accessToken });
+      res.send({ accessToken, refreshToken, userId, roles: userRoles });
     } else {
-      res.status(400).send({ message: "Wrong password" });
+      res.status(400).send({ success: false, message: "Wrong password" });
     }
   } catch (error) {
     res.status(500).send({ message: error.message });

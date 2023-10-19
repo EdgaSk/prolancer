@@ -9,10 +9,8 @@ export const registerUser = async (userData) => {
       throw new Error("Registration failed");
     }
 
-    // Registracija sėkminga, grąžiname sėkmės pranešimą
     return { success: true, message: "Registration successful" };
   } catch (error) {
-    // Registracija nesėkminga, grąžiname klaidos pranešimą
     return { success: false, message: error.message };
   }
 };

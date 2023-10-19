@@ -34,6 +34,7 @@
 
   "loginTitle": "Prisijungimas",
   "loginBtn": "Prisijungti",
+  "usernotfound": "Tokio vartojo nėra arba blogas slaptažodis",
 
   "labas": "Labas"
 }

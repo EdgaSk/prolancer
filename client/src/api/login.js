@@ -9,10 +9,15 @@ export const loginUser = async (userData) => {
       throw new Error("Login failed");
     }
 
-    // Prisijungimas sėkmingas, grąžiname sėkmės pranešimą
-    return { success: true, message: "Login successful" };
+    return {
+      success: true,
+      message: "Login successful",
+      userId: response.data.userId,
+      roles: response.data.roles,
+      accessToken: response.data.accessToken,
+      refreshToken: response.data.refreshToken,
+    };
   } catch (error) {
-    // Prisijungimas nesėkmingas, grąžiname klaidos pranešimą
     return { success: false, message: error.message };
   }
 };
