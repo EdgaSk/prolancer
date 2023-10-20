@@ -2,7 +2,7 @@ const express = require("express");
 const servicesController = require("../controlers/servicesControler");
 const router = express.Router();
 const multer = require("multer");
-const upload = multer({ dest: "uploads/services" });
+const upload = require("../middleware/multer");
 
 router
   .route("/")

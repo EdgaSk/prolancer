@@ -6,17 +6,19 @@ const SubmissionServices = () => {
   const [categories, setCategories] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState(null);
-  const { accessToken } = useContext(UserContext);
+  const { accessToken, userData } = useContext(UserContext);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     const formData = new FormData();
+    formData.append("userId", userData.userId);
     formData.append("title", title);
     formData.append("categories", categories);
     formData.append("description", description);
-    formData.append("image", image);
-
+    formData.append("image", image, image.name);
+    console.log(image);
+    console.log(image.name);
     try {
       const response = await fetch("http://localhost:3000/services", {
         headers: {
