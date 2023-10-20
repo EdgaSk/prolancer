@@ -56,5 +56,9 @@
   "totalFreelancer": "Darbuotojų",
   "positivereviews": "Teigiamų atsiliepimų",
   "ordersrecieved": "Gautų užsakymų",
-  "projectCompleted": "Užbaiktų projektų"
+  "projectCompleted": "Užbaiktų projektų",
+
+  "errorTitle": "Oi! Atrodo, kad pasiklydote.",
+  "errorSubTitle": "Nerandate, ko ieškote? Atlikite paiešką iš naujo arba grįžkite į mūsų Pradinį puslapį.",
+  "errorBtnbackhome": "Grįžti į Pradžią"
 }

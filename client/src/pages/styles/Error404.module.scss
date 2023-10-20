@@ -20,6 +20,7 @@
   flex-direction: column;
   flex: 1;
   justify-content: center;
+  align-items: center;
   .title {
     font-size: 2.2rem;
     color: var(--text-black);
@@ -28,12 +29,28 @@
     font-size: 0.9rem;
     color: var(--text-grey);
   }
+  .baclkBtn {
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 10px 0;
+    border-radius: 5px;
+    width: 200px;
+    margin-top: 20px;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--black-color);
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
   .cointainer {
     flex-direction: row;
     padding: 5% 10%;
+  }
+  .right {
+    align-items: none;
   }
 }
 

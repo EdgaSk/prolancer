@@ -36,6 +36,7 @@ app.use("/userspublic", require("./routes/usersPublic"));
 app.use(verifyJWT);
 app.use("/users", require("./routes/users"));
 app.use("/jobs", require("./routes/jobs"));
+app.use("/services", require("./routes/services"));
 
 //error handle
 app.use(errorHandle);

@@ -56,5 +56,9 @@
   "totalFreelancer": "Total Freelancers",
   "positivereviews": "Positive Reviews",
   "ordersrecieved": "Orders Recieved",
-  "projectCompleted": "Project Completed"
+  "projectCompleted": "Project Completed",
+
+  "errorTitle": "Oops! It looks like you're lost.",
+  "errorSubTitle": "Cant find what you looking for? Take a moment and do a search below or start from our Home Page",
+  "errorBtnbackhome": "Back to Home"
 }
