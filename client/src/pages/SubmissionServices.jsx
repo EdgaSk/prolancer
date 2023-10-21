@@ -1,5 +1,9 @@
 import { useContext, useState } from "react";
 import { UserContext } from "../context/UserContext";
+import { postServices } from "../api/services";
+import { useNavigate } from "react-router-dom";
+import { Field, Form, Formik, ErrorMessage } from "formik";
+import * as Yup from "yup";
 
 const SubmissionServices = () => {
   const [title, setTitle] = useState("");
@@ -7,6 +11,7 @@ const SubmissionServices = () => {
   const [description, setDescription] = useState("");
   const [image, setImage] = useState(null);
   const { accessToken, userData } = useContext(UserContext);
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -20,18 +25,10 @@ const SubmissionServices = () => {
     console.log(image);
     console.log(image.name);
     try {
-      const response = await fetch("http://localhost:3000/services", {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-        method: "POST",
-        body: formData,
-      });
+      const response = await postServices(accessToken, formData);
 
-      if (response.ok) {
-        alert("Paslauga sėkmingai įkelta!");
-      } else {
-        alert("Įvyko klaida įkeliant paslaugą.");
+      if (response) {
+        navigate(`/dashboard`);
       }
     } catch (error) {
       console.error(error);

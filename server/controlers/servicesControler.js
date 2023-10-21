@@ -18,7 +18,6 @@ const getAllServices = async (req, res) => {
 };
 
 const postService = async (req, res) => {
-  console.log(req.file);
   try {
     const connection = await client.connect();
     const { title, categories, description } = req.body;
