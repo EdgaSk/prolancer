@@ -15,3 +15,13 @@ export const postServices = async (accessToken, data) => {
     throw new Error("Failed to fetch user");
   }
 };
+
+export const getAllServicesPublic = async (data) => {
+  try {
+    const response = await axios.get(`${API}/servicespublic`, data);
+    return response.data;
+  } catch (error) {
+    console.error("Failed to fetch user:", error.message);
+    throw new Error("Failed to fetch user");
+  }
+};

@@ -61,5 +61,14 @@
 
   "errorTitle": "Oi! Atrodo, kad pasiklydote.",
   "errorSubTitle": "Nerandate, ko ieškote? Atlikite paiešką iš naujo arba grįžkite į mūsų Pradinį puslapį.",
-  "errorBtnbackhome": "Grįžti į Pradžią"
+  "errorBtnbackhome": "Grįžti į Pradžią",
+
+  "graphicsdesign": "Grafika ir dizainas",
+  "digitalmarketing": "Skaitmeninė rinkodara",
+  "writingtranslation": "Rašymas ir vertimai",
+  "videoanimation": "Vaizdo ir animacija",
+  "musicaudio": "Muzika ir garsas",
+  "programmingtech": "Programavimas ir technologijos",
+  "data": "Duomenys",
+  "aiservices": "Dirbtinio intelekto paslaugos"
 }

@@ -61,5 +61,14 @@
 
   "errorTitle": "Oops! It looks like you're lost.",
   "errorSubTitle": "Cant find what you looking for? Take a moment and do a search below or start from our Home Page",
-  "errorBtnbackhome": "Back to Home"
+  "errorBtnbackhome": "Back to Home",
+
+  "graphicsdesign": "Graphics & Design",
+  "digitalmarketing": "Digital Marketing",
+  "writingtranslation": "Writing & Translation",
+  "videoanimation": "Video & Animation",
+  "musicaudio": "Music & Audio",
+  "programmingtech": "Programming & Tech",
+  "data": "Data",
+  "aiservices": "AI Services"
 }

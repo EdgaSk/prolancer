@@ -32,6 +32,8 @@ app.use("/login", require("./routes/login"));
 app.use("/refresh", require("./routes/refresh"));
 app.use("/logout", require("./routes/logout"));
 app.use("/userspublic", require("./routes/usersPublic"));
+app.use("/servicespublic", require("./routes/publicServices"));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use(verifyJWT);
 app.use("/users", require("./routes/users"));

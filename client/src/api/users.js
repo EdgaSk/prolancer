@@ -14,3 +14,13 @@ export const getUserbyID = async (accessToken, id) => {
     throw new Error("Failed to fetch user");
   }
 };
+
+export const getUsersbyIDpublic = async (id) => {
+  try {
+    const response = await axios.get(`${API}/userspublic/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error("Failed to fetch user:", error.message);
+    throw new Error("Failed to fetch user");
+  }
+};
