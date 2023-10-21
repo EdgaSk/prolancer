@@ -20,13 +20,35 @@ const getAllServices = async (req, res) => {
 const postService = async (req, res) => {
   try {
     const connection = await client.connect();
-    const { title, categories, description } = req.body;
+    const {
+      date,
+      title,
+      categories,
+      language,
+      englishlanguageLevel,
+      location,
+      description,
+      price,
+      skills,
+    } = req.body;
     const userId = new ObjectId(req.userId);
     const imageUrl = req.file.filename;
     const data = await connection
       .db("prolancer")
       .collection("services")
-      .insertOne({ userId, title, categories, description, imageUrl });
+      .insertOne({
+        userId,
+        date,
+        title,
+        categories,
+        language,
+        englishlanguageLevel,
+        location,
+        description,
+        price,
+        imageUrl,
+        skills,
+      });
     await connection.close();
     res.send(data);
   } catch (error) {

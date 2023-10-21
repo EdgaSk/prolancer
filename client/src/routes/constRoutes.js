@@ -5,6 +5,7 @@ import Contacts from "../pages/Contacts";
 import Profile from "../pages/Profile";
 import SubmissionJob from "../pages/SubmissionJob";
 import SubmissionServices from "../pages/SubmissionServices";
+import BrowserServices from "../pages/BrowserServices";
 
 export const HOME_PATH = "/";
 export const ERROR404_PATH = "*";
@@ -13,16 +14,19 @@ export const DASHBOARD_PATH = "/";
 export const PROFILE_PATH = "/profile";
 export const SUBMISSION_JOB_PATH = "/submissionjob";
 export const SUBMISSION_SERVICES_PATH = "/submissionservices";
+export const BROWSER_SERVICES_PATH = "/browserservices";
 
 export const logInRoutes = [
   { path: HOME_PATH, Component: Home },
   { path: CONTACTS_PATH, Component: Contacts },
+  { path: BROWSER_SERVICES_PATH, Component: BrowserServices },
   { path: ERROR404_PATH, Component: Error404 },
 ];
 
 export const logOutRoutes = [
   { path: HOME_PATH, Component: Home },
   { path: CONTACTS_PATH, Component: Contacts },
+  { path: BROWSER_SERVICES_PATH, Component: BrowserServices },
   { path: ERROR404_PATH, Component: Error404 },
 ];
 
@@ -51,6 +55,7 @@ export const employerDashBoard = [
 export const navLinks = [
   { path: HOME_PATH, nameKey: "homePage" },
   { path: CONTACTS_PATH, nameKey: "contactsPage" },
+  { path: BROWSER_SERVICES_PATH, nameKey: "browserServices" },
 ];
 
 export const dashBoardAdminLinks = [
