@@ -1,0 +1,12 @@
+.cointainer {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar {
+  display: flex;
+}

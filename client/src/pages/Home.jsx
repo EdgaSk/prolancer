@@ -18,7 +18,6 @@ import { SERVICES_UPLOAD_API } from "../api/APIconst";
 
 const Home = () => {
   const { t } = useTranslation();
-
   const [services, setServices] = useState([]);
 
   useEffect(() => {
@@ -102,6 +101,7 @@ const Home = () => {
                   title={service.title}
                   price={service.price}
                   userName={`${user.name} ${user.surname}`}
+                  serviceId={service._id}
                 />
               ))
             )}

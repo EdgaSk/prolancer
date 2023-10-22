@@ -4,9 +4,11 @@ import { getAllServicesWithUsers } from "../api/services";
 import { SERVICES_UPLOAD_API } from "../api/APIconst";
 import styles from "./styles/BrowserServices.module.scss";
 import headerImg from "../assets/img/bg-filter.jpg";
+import { useTranslation } from "react-i18next";
 
 const BrowserServices = () => {
   const [services, setServices] = useState([]);
+  const { t } = useTranslation();
 
   useEffect(() => {
     // Užkraunam paslaugas su vartotojais
@@ -27,7 +29,7 @@ const BrowserServices = () => {
       <div className={styles.servicesHeader}>
         <img className={styles.headerImg} src={headerImg} alt="" />
         <div className={styles.titleBox}>
-          <h1 className={styles.title}>Services</h1>
+          <h1 className={styles.title}>{t("browserServices")}</h1>
         </div>
       </div>
       <div className={styles.cardsBox}>
@@ -40,6 +42,7 @@ const BrowserServices = () => {
               title={service.title}
               price={service.price}
               userName={`${user.name} ${user.surname}`}
+              serviceId={service._id}
             />
           ))
         )}

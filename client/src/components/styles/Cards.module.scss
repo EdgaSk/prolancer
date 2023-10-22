@@ -22,6 +22,10 @@
     font-size: 1rem;
     color: var(--text-black);
     font-weight: 500;
+    cursor: pointer;
+    &:hover {
+      color: var(--secondary-color);
+    }
   }
   .bottom {
     display: flex;
