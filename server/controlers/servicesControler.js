@@ -56,4 +56,38 @@ const postService = async (req, res) => {
   }
 };
 
-module.exports = { getAllServices, postService };
+const getServicesWithUser = async (req, res) => {
+  try {
+    const connection = await client.connect();
+    const data = await connection
+      .db("prolancer")
+      .collection("users")
+      .aggregate([
+        {
+          $lookup: {
+            from: "services",
+            localField: "_id",
+            foreignField: "userId",
+            as: "usersServices",
+          },
+        },
+        {
+          $project: {
+            _id: 1, // Pridėkite kitus laukus, kuriuos norite išlaikyti
+            name: 1,
+            surname: 1,
+            email: 1,
+            usersServices: 1,
+          },
+        },
+      ])
+      .toArray();
+    await connection.close();
+    res.send(data);
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({ error });
+  }
+};
+
+module.exports = { getAllServices, postService, getServicesWithUser };
