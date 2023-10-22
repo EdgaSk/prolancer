@@ -1,6 +1,7 @@
 {
   "english": "Anglų",
   "lithuanian": "Lietuvių",
+  "chinese": "Kinų",
 
   "homePage": "Pradžia",
   "contactsPage": "Kontaktai",
@@ -73,5 +74,15 @@
   "aiservices": "Dirbtinio intelekto paslaugos",
 
   "startingPrice": "Kaina nuo",
-  "newestServices": "Naujausios Paslaugos"
+  "newestServices": "Naujausios Paslaugos",
+
+  "categories": "Kategorijos",
+  "publishDate": "Paskelbimo data",
+  "native": "Gimtoji",
+  "fluent": "Puikiai moku",
+  "intermediate": "Vidutinio lygio",
+  "basic": "Pradinio lygio",
+  "englishLevel": "Anglų kalbos lygis",
+  "descriptionService": "Aprašymas",
+  "skills": "Įgūdžiai"
 }

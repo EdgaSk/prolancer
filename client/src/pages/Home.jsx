@@ -21,7 +21,6 @@ const Home = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    // Užkraunam paslaugas su vartotojais
     async function fetchServicesWithUsers() {
       try {
         const data = await getAllServicesWithUsers();

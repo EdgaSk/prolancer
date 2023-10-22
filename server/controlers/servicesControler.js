@@ -73,7 +73,7 @@ const getServicesWithUser = async (req, res) => {
         },
         {
           $project: {
-            _id: 1, // Pridėkite kitus laukus, kuriuos norite išlaikyti
+            _id: 1,
             name: 1,
             surname: 1,
             email: 1,
@@ -90,4 +90,67 @@ const getServicesWithUser = async (req, res) => {
   }
 };
 
-module.exports = { getAllServices, postService, getServicesWithUser };
+const getServicesWithUserByID = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const connection = await client.connect();
+    const data = await connection
+      .db("prolancer")
+      .collection("services")
+      .aggregate([
+        {
+          $match: { _id: new ObjectId(id) },
+        },
+        {
+          $lookup: {
+            from: "users",
+            localField: "userId",
+            foreignField: "_id",
+            as: "servicesUser",
+          },
+        },
+        {
+          $project: {
+            _id: 1,
+            title: 1,
+            date: 1,
+            categories: 1,
+            language: 1,
+            englishlanguageLevel: 1,
+            location: 1,
+            description: 1,
+            price: 1,
+            imageUrl: 1,
+            skills: 1,
+            servicesUser: {
+              name: 1,
+              surname: 1,
+              email: 1,
+            },
+          },
+        },
+        {
+          $unwind: "$servicesUser", // grąžina vietoj masyvo objektą, nes masyve tik vienas elementas
+        },
+      ])
+      .toArray();
+
+    await connection.close();
+
+    if (data.length > 0) {
+      res.send(data[0]);
+    } else {
+      res.status(404).send({ error: "Paslauga nerasta" });
+    }
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({ error });
+  }
+};
+
+module.exports = {
+  getAllServices,
+  postService,
+  getServicesWithUser,
+  getServicesWithUserByID,
+};

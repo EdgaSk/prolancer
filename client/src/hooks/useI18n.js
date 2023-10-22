@@ -2,10 +2,12 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import enTranslations from "../translation/en.json";
 import ltTranslations from "../translation/lt.json";
+import zhTranslations from "../translation/zh.json";
 
 const resources = {
   en: { translation: enTranslations },
   lt: { translation: ltTranslations },
+  zh: { translation: zhTranslations },
 };
 
 const defaultLanguage = localStorage.getItem("selectedLang") || "en";

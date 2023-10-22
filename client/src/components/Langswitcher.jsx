@@ -25,11 +25,19 @@ const LangSwitcher = () => {
       <button className={styles.button} onClick={toggleDropdown}>
         {selectedLang === "lt" ? (
           <img src="/ltu.png" alt="Lietuvių vėliava" />
-        ) : (
+        ) : selectedLang === "en" ? (
           <img src="/eng.png" alt="English flag" />
+        ) : (
+          <img src="/china.png" alt="Chinese flag" />
         )}
         <span>
-          {t(selectedLang === "lt" ? "Lietuvių" : "English")}
+          {t(
+            selectedLang === "lt"
+              ? "Lietuvių"
+              : selectedLang === "en"
+              ? "English"
+              : "中文"
+          )}
           <MdKeyboardArrowDown />
         </span>
       </button>
@@ -49,6 +57,13 @@ const LangSwitcher = () => {
           >
             <img src="/ltu.png" alt="Lietuvių vėliava" />
             <span>{t("lithuanian")}</span>
+          </button>
+          <button
+            className={styles.langBtn}
+            onClick={() => changeLanguage("zh")}
+          >
+            <img src="/china.png" alt="Chinese flag" />
+            <span>{t("chinese")}</span>
           </button>
         </div>
       )}

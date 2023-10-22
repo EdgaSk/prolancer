@@ -1,6 +1,7 @@
 {
   "english": "English",
   "lithuanian": "Lithuanian",
+  "chinese": "Chinese",
 
   "homePage": "Home",
   "contactsPage": "Contacts",
@@ -73,5 +74,15 @@
   "aiservices": "AI Services",
 
   "startingPrice": "Starting at",
-  "newestServices": "Newest Services"
+  "newestServices": "Newest Services",
+
+  "categories": "Categories",
+  "publishDate": "Publish date",
+  "native": "Native",
+  "fluent": "Fluent",
+  "intermediate": "Intermediate",
+  "basic": "Basic",
+  "englishLevel": "English level",
+  "descriptionService": "Description",
+  "skills": "Skills"
 }

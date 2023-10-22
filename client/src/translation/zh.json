@@ -1,0 +1,88 @@
+{
+  "english": "英语",
+  "lithuanian": "立陶宛",
+  "chinese": "中文",
+
+  "homePage": "主页",
+  "contactsPage": "联系方式",
+  "dashboardPage": "仪表板",
+  "submissionJobPage": "提交工作",
+  "submissionServicesPage": "提交服务",
+  "profilePage": "个人资料",
+  "browserServices": "服务",
+
+  "freelancer": "自由职业者",
+  "employer": "雇主",
+  "reqRole": "需要角色",
+  "reqName": "需要姓名",
+  "reqSurname": "需要姓",
+  "reqEmail": "需要电子邮件",
+  "reqPassword": "需要密码",
+  "reqrepeatPassword": "必须重复密码",
+  "minCharacters": "至少5个字符",
+  "invalidEmail": "无效电子邮件",
+  "minPassword": "密码至少需要8个字符",
+  "matchesPassword": "密码必须包括一个 @$!%*?&，大写和小写字母和数字",
+  "matchPassword": "密码必须匹配",
+  "emailAlreadyExists": "此电子邮件已在使用中，请使用其他电子邮件。",
+
+  "registerTitle": "注册",
+  "name": "名字",
+  "yourName": "您的名字",
+  "surname": "姓",
+  "yourSurname": "您的姓",
+  "emailadress": "电子邮件地址",
+  "youremail": "您的电子邮件",
+  "password": "密码",
+  "yourpasword": "您的密码",
+  "repeatpasword": "重复密码",
+  "yourepeatpasword": "重复您的密码",
+  "registerBtn": "注册",
+
+  "loginTitle": "登录",
+  "loginBtn": "登录",
+  "usernotfound": "找不到用户或密码错误",
+
+  "roles": {
+    "freelancer": "自由职业者",
+    "admin": "管理员",
+    "employer": "雇主"
+  },
+
+  "heroTitle": "为您的业务找到完美的自由职业服务",
+  "herosubTitle": "与才华横溢的人合作，以最实惠的价格充分利用您的时间和成本",
+  "trustedBy": "得到了信任",
+  "safeLabel": "安全可靠",
+  "proofLabel": "质量保证",
+
+  "totalFreelancer": "自由职业者总数",
+  "positivereviews": "积极评价",
+  "ordersrecieved": "接收的订单",
+  "projectCompleted": "已完成项目",
+
+  "errorTitle": "糟糕！看起来你迷路了。",
+  "errorSubTitle": "找不到您要找的东西？花点时间在下面搜索或从我们的主页开始",
+  "errorBtnbackhome": "返回主页",
+
+  "graphicsdesign": "图形与设计",
+  "digitalmarketing": "数字营销",
+  "writingtranslation": "写作与翻译",
+  "videoanimation": "视频与动画",
+  "musicaudio": "音乐与音频",
+  "programmingtech": "编程与技术",
+  "data": "数据",
+  "aiservices": "AI 服务",
+
+  "startingPrice": "起价",
+  "newestServices": "最新服务",
+
+  "categories": "类别",
+  "publishDate": "发布日期",
+  "native": "母语",
+  "fluent": "流利",
+  "intermediate": "中级",
+  "basic": "基础",
+  "englishLevel": "英语水平",
+  "descriptionService": "描述",
+  "skills": "技能"
+}
