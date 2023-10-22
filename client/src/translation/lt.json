@@ -70,5 +70,8 @@
   "musicaudio": "Muzika ir garsas",
   "programmingtech": "Programavimas ir technologijos",
   "data": "Duomenys",
-  "aiservices": "Dirbtinio intelekto paslaugos"
+  "aiservices": "Dirbtinio intelekto paslaugos",
+
+  "startingPrice": "Kaina nuo",
+  "newestServices": "Naujausios Paslaugos"
 }

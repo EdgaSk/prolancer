@@ -13,7 +13,9 @@ const AppRoutes = () => {
 
   return (
     <>
-      <header style={{ position: "sticky", top: 0, right: 0, left: 0 }}>
+      <header
+        style={{ position: "sticky", top: 0, right: 0, left: 0, zIndex: 10 }}
+      >
         <NavBar />
       </header>
       <main>

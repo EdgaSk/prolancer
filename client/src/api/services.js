@@ -25,3 +25,15 @@ export const getAllServicesPublic = async (data) => {
     throw new Error("Failed to fetch user");
   }
 };
+
+export const getAllServicesWithUsers = async () => {
+  try {
+    const response = await axios.get(
+      `${API}/servicespublic/services-with-users`
+    );
+    return response.data;
+  } catch (error) {
+    console.error("Failed to fetch user:", error.message);
+    throw new Error("Failed to fetch user");
+  }
+};

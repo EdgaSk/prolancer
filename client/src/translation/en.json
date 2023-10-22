@@ -70,5 +70,8 @@
   "musicaudio": "Music & Audio",
   "programmingtech": "Programming & Tech",
   "data": "Data",
-  "aiservices": "AI Services"
+  "aiservices": "AI Services",
+
+  "startingPrice": "Starting at",
+  "newestServices": "Newest Services"
 }

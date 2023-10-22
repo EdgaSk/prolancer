@@ -1,0 +1,21 @@
+.cointainer {
+  display: flex;
+  background-color: var(--secondary-color);
+  justify-content: space-between;
+  padding: 20px 20px;
+  margin-top: 50px;
+  align-items: center;
+  .copyright {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+  }
+  .iconBox {
+    display: flex;
+    gap: 10px;
+    .icon {
+      width: 20px;
+      height: 20px;
+      color: var(--primary-color);
+    }
+  }
+}

@@ -14,7 +14,7 @@ const Cards = (props) => {
       <div className={styles.bottom}>
         <p>{props.userName}</p>
         <p className={styles.price}>
-          <span>Starting at </span>
+          <span>{t("startingPrice")}</span>
           {props.price}$
         </p>
       </div>

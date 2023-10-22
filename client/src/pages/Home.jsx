@@ -11,9 +11,30 @@ import amd from "../assets/img/amd.png";
 import logitech from "../assets/img/logitech.png";
 import { BsPeople, BsRocketTakeoff } from "react-icons/bs";
 import { GoNote } from "react-icons/go";
+import { useEffect, useState } from "react";
+import { getAllServicesWithUsers } from "../api/services";
+import Cards from "../components/Cards";
+import { SERVICES_UPLOAD_API } from "../api/APIconst";
 
 const Home = () => {
   const { t } = useTranslation();
+
+  const [services, setServices] = useState([]);
+
+  useEffect(() => {
+    // Užkraunam paslaugas su vartotojais
+    async function fetchServicesWithUsers() {
+      try {
+        const data = await getAllServicesWithUsers();
+        setServices(data);
+      } catch (error) {
+        console.error("Klaida gaunant paslaugas su vartotojais: ", error);
+      }
+    }
+
+    fetchServicesWithUsers();
+  }, []);
+
   return (
     <div className={styles.cointainer}>
       <section className={styles.heroBox}>
@@ -63,6 +84,27 @@ const Home = () => {
           <BsRocketTakeoff className={styles.statsIcons} />
           <p className={styles.statsTitle}>5M</p>
           <p className={styles.statsSubTitle}>{t(`projectCompleted`)}</p>
+        </div>
+      </section>
+      <section className={styles.newestServices}>
+        <div className={styles.servicesTitle}>
+          <p className={styles.servicesBoxTitle}>{t("newestServices")}</p>
+        </div>
+        <div className={styles.cardsBox}>
+          {services
+            .slice(0, 8)
+            .map((user) =>
+              user.usersServices.map((service) => (
+                <Cards
+                  key={service._id}
+                  imgUrl={`${SERVICES_UPLOAD_API}/${service.imageUrl}`}
+                  categories={service.categories}
+                  title={service.title}
+                  price={service.price}
+                  userName={`${user.name} ${user.surname}`}
+                />
+              ))
+            )}
         </div>
       </section>
     </div>
