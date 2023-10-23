@@ -5,13 +5,55 @@ import styles from "./styles/DropMenu.module.scss";
 import LangSwitcher from "./Langswitcher";
 import { AiOutlineClose } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
-import { navLinks } from "../routes/constRoutes";
+import {
+  dashBoardAdminLinks,
+  dashBoardEmployerLinks,
+  dashBoardFreelancerLinks,
+  navLinks,
+} from "../routes/constRoutes";
 import { NavLink } from "react-router-dom";
+import { UserContext } from "../context/UserContext";
+import { useContext } from "react";
 import LogReg from "./LogReg";
 
 const DropMenu = () => {
   const [open, setOpen] = React.useState(false);
   const { t } = useTranslation();
+  const { userData } = useContext(UserContext);
+
+  const isFreelancer = userData.roles && userData.roles.freelancer;
+  const isEmployer = userData.roles && userData.roles.employer;
+  const isAdmin = userData.roles && userData.roles.admin;
+
+  const FreelancerDashboard = () => (
+    <>
+      {dashBoardFreelancerLinks.map((link) => (
+        <NavLink to={`/dashboard${link.path}`} key={link.path}>
+          {t(link.nameKey)}
+        </NavLink>
+      ))}
+    </>
+  );
+
+  const EmployerDashboard = () => (
+    <>
+      {dashBoardEmployerLinks.map((link) => (
+        <NavLink to={`/dashboard${link.path}`} key={link.path}>
+          {t(link.nameKey)}
+        </NavLink>
+      ))}
+    </>
+  );
+
+  const AdminDashboard = () => (
+    <>
+      {dashBoardAdminLinks.map((link) => (
+        <NavLink to={`/dashboard${link.path}`} key={link.path}>
+          {t(link.nameKey)}
+        </NavLink>
+      ))}
+    </>
+  );
 
   const toggleDrawer = (open) => (event) => {
     if (
@@ -52,6 +94,11 @@ const DropMenu = () => {
                 {t(link.nameKey)}
               </NavLink>
             ))}
+          </div>
+          <div className={styles.linksCointainer}>
+            {isFreelancer && <FreelancerDashboard />}
+            {isEmployer && <EmployerDashboard />}
+            {isAdmin && <AdminDashboard />}
           </div>
         </div>
       </Drawer>

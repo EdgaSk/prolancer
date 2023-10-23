@@ -99,6 +99,12 @@ const Service = () => {
                 </span>
               </p>
             </div>
+            <div className={styles.priceBox}>
+              <p className={styles.price}>
+                {t("startingPrice")}&nbsp;
+                {serviceData.price}$
+              </p>
+            </div>
           </div>
         </div>
       )}

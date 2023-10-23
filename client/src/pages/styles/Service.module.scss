@@ -79,12 +79,31 @@
     margin-top: 10px;
     padding: 10px 0 0 0;
   }
+  .priceBox {
+    display: flex;
+    border-top: 1px solid var(--border-light);
+    margin-top: 10px;
+    padding: 10px 0 0 0;
+  }
+  .price {
+    display: flex;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 640px) {
   .serviceCointainer {
     grid-template-columns: 2fr 1fr;
     gap: 20px;
+  }
+  .userInfo {
+    position: sticky;
+    top: 100px;
   }
 }
 
@@ -99,9 +118,5 @@
   .serviceCointainer {
     padding: 20px 20%;
     gap: 50px;
-  }
-  .userInfo {
-    position: sticky;
-    top: 100px;
   }
 }
