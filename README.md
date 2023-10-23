@@ -14,14 +14,17 @@ To install the necessary dependencies, run the following command:
 
 #### Front-End
 
-- Install Node with package
+- Install Node with package:
   yarn add
-- Run project
+- Run project:
   yarn dev
 
 #### Back-End
 
-npm install
+- Install Node with package:
+  npm install
+- Run project:
+  npm run dev or npm run start
 
 ### Software dependencies
 
