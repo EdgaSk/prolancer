@@ -16,10 +16,9 @@ To install the necessary dependencies, run the following command:
 
 This project uses the following software dependencies:
 
-Front-end
+Front-end - npm yarn add
 
 ```bash
-npm yarn add
 @emotion/react: 11.11.1
 @emotion/styled: 11.11.0
 @mui/icons-material: 5.14.13
@@ -35,7 +34,11 @@ react-icons: 4.11.0
 react-router-dom: 6.16.0
 sass: 1.69.2
 yup: 1.3.2
-Back-end
+```
+
+Back-end - npm install
+
+```bash
 bcrypt: 5.1.1
 cookie-parser: 1.4.6
 cors: 2.8.5
