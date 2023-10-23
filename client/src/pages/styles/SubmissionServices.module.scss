@@ -1,0 +1,119 @@
+.mainCointainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 10px;
+}
+.pageTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+.cointainerForm {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--primary-color);
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.fieldsBox {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+}
+
+.labelBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.inputStyles {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--border-gey);
+  margin-top: 5px;
+  &:focus {
+    outline: none;
+    border: 1px solid var(--secondary-color);
+  }
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--border-gey);
+  margin-top: 5px;
+  &:focus {
+    outline: none;
+    border: 1px solid var(--secondary-color);
+  }
+}
+
+.errorMesage {
+  font-size: 0.8rem;
+  color: #ec3535;
+}
+
+.imgBox {
+  border-radius: 10px;
+  margin: 20px;
+  display: flex;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  .imagePrew {
+    width: 100%;
+    height: 100%;
+    min-height: 50px;
+  }
+}
+
+.submitBtn {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  align-self: center;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--black-color);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .mainCointainer {
+    padding: 50px 20px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .mainCointainer {
+    padding: 50px 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mainCointainer {
+    padding: 50px 10%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .mainCointainer {
+    padding: 50px 20%;
+  }
+}

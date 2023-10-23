@@ -2,6 +2,16 @@
   "english": "Anglų",
   "lithuanian": "Lietuvių",
   "chinese": "Kinų",
+  "spanish": "Ispanų",
+  "french": "Prancūzų",
+  "german": "Vokiečių",
+  "italian": "Italų",
+  "portuguese": "Portugalų",
+  "japanese": "Japonų",
+  "russian": "Rusų",
+  "arabic": "Arabų",
+  "hindi": "Hindi",
+  "turkish": "Turkų",
 
   "homePage": "Pradžia",
   "contactsPage": "Kontaktai",
@@ -95,5 +105,32 @@
   "yuPprice": "Kaina yra privaloma",
   "yuPimage": "Nuotrauka yra privaloma",
   "yuPskills": "Bent vienas įgūdis yra privalomas",
-  "yuPmoreThanZero": "Kaina turi būti didesnė nei 0"
+  "yuPmoreThanZero": "Kaina turi būti didesnė nei 0",
+
+  "submitbtn": "Pateikti",
+
+  "selectCategory": "Pasirinkite kategoriją",
+  "selectLanguage": "Pasirinkite kalbą",
+  "selectEnglishLevel": "Pasirinkite anglų kalbos lygį",
+  "selectLocation": "Pasirinkite vietą",
+
+  "london": "Londonas",
+  "paris": "Paryžius",
+  "berlin": "Berlynas",
+  "madrid": "Madridas",
+  "rome": "Roma",
+  "lisbon": "Lišabona",
+  "amsterdam": "Amsterdamas",
+  "athens": "Atėnai",
+  "vilnius": "Vilnius",
+
+  "formTitle": "Pavadinimas",
+  "formPrice": "Kaina / val.",
+  "formImage": "Nuotrauka",
+  "formSkills": "Įgūdžiai",
+  "formCategory": "Kategorija",
+  "formLanguage": "Kalba",
+  "formEnglishLevel": "Anglų kalbos lygis",
+  "formLocation": "Vieta",
+  "formDescription": "Aprašymas"
 }

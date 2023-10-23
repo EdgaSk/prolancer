@@ -2,6 +2,16 @@
   "english": "英语",
   "lithuanian": "立陶宛",
   "chinese": "中文",
+  "spanish": "西班牙语",
+  "french": "法语",
+  "german": "德语",
+  "italian": "意大利语",
+  "portuguese": "葡萄牙语",
+  "japanese": "日语",
+  "russian": "俄语",
+  "arabic": "阿拉伯语",
+  "hindi": "印地语",
+  "turkish": "土耳其语",
 
   "homePage": "主页",
   "contactsPage": "联系方式",
@@ -95,5 +105,32 @@
   "yuPprice": "价格不能为空",
   "yuPimage": "图片不能为空",
   "yuPskills": "至少需要一个技能",
-  "yuPmoreThanZero": "价格必须大于0"
+  "yuPmoreThanZero": "价格必须大于0",
+
+  "submitbtn": "提交",
+
+  "selectCategory": "选择类别",
+  "selectLanguage": "选择语言",
+  "selectEnglishLevel": "选择英语水平",
+  "selectLocation": "选择位置",
+
+  "london": "伦敦",
+  "paris": "巴黎",
+  "berlin": "柏林",
+  "madrid": "马德里",
+  "rome": "罗马",
+  "lisbon": "里斯本",
+  "amsterdam": "阿姆斯特丹",
+  "athens": "雅典",
+  "vilnius": "维尔纽斯",
+
+  "formTitle": "标题",
+  "formPrice": "每小时价格",
+  "formImage": "图像",
+  "formSkills": "技能",
+  "formCategory": "类别",
+  "formLanguage": "语言",
+  "formEnglishLevel": "英语水平",
+  "formLocation": "位置",
+  "formDescription": "描述"
 }

@@ -1,0 +1,38 @@
+.cointainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 20%;
+}
+
+.img {
+  margin-top: 20px;
+  width: 80%;
+  height: 80%;
+}
+
+@media screen and (min-width: 480px) {
+  .cointainer {
+    padding: 50px 5% 20% 5%;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .cointainer {
+    padding: 50px 7% 20% 7%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cointainer {
+    padding: 50px 15% 20% 15%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .cointainer {
+    padding: 50px 30% 10% 30%;
+  }
+}

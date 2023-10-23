@@ -2,6 +2,16 @@
   "english": "English",
   "lithuanian": "Lithuanian",
   "chinese": "Chinese",
+  "spanish": "Spanish",
+  "french": "French",
+  "german": "German",
+  "italian": "Italian",
+  "portuguese": "Portuguese",
+  "japanese": "Japanese",
+  "russian": "Russian",
+  "arabic": "Arabic",
+  "hindi": "Hindi",
+  "turkish": "Turkish",
 
   "homePage": "Home",
   "contactsPage": "Contacts",
@@ -95,5 +105,32 @@
   "yuPprice": "Price is required",
   "yuPimage": "Image is required",
   "yuPskills": "At least one skill is required",
-  "yuPmoreThanZero": "Price must be greater than 0"
+  "yuPmoreThanZero": "Price must be greater than 0",
+
+  "submitbtn": "Submit",
+
+  "selectCategory": "Select category",
+  "selectLanguage": "Select language",
+  "selectEnglishLevel": "Select english level",
+  "selectLocation": "Select location",
+
+  "london": "London",
+  "paris": "Paris",
+  "berlin": "Berlin",
+  "madrid": "Madrid",
+  "rome": "Rome",
+  "lisbon": "Lisbon",
+  "amsterdam": "Amsterdam",
+  "athens": "Athens",
+  "vilnius": "Vilnius",
+
+  "formTitle": "Title",
+  "formPrice": "Price /hr",
+  "formImage": "Image",
+  "formSkills": "Skills",
+  "formCategory": "Category",
+  "formLanguage": "Language",
+  "formEnglishLevel": "English Level",
+  "formLocation": "Location",
+  "formDescription": "Description"
 }
