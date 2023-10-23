@@ -12,11 +12,19 @@ In this section, you'll find information on how to get the project up and runnin
 
 To install the necessary dependencies, run the following command:
 
+#### Front-End
+
+yarn add
+
+#### Back-End
+
+npm install
+
 ### Software dependencies
 
 This project uses the following software dependencies:
 
-Front-end - npm yarn add
+Front-end
 
 ```bash
 @emotion/react: 11.11.1
@@ -36,7 +44,7 @@ sass: 1.69.2
 yup: 1.3.2
 ```
 
-Back-end - npm install
+Back-end
 
 ```bash
 bcrypt: 5.1.1
