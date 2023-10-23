@@ -84,5 +84,16 @@
   "basic": "Basic",
   "englishLevel": "English level",
   "descriptionService": "Description",
-  "skills": "Skills"
+  "skills": "Skills",
+
+  "yuPtitle": "Title is required",
+  "yuPcategories": "Category is required",
+  "yuPlanguage": "Language is required",
+  "yuPenglishlanguageLevel": "English Language Level is required",
+  "yuPlocation": "Location is required",
+  "yuPdescription": "Description is required",
+  "yuPprice": "Price is required",
+  "yuPimage": "Image is required",
+  "yuPskills": "At least one skill is required",
+  "yuPmoreThanZero": "Price must be greater than 0"
 }

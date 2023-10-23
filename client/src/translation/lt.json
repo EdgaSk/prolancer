@@ -84,5 +84,16 @@
   "basic": "Pradinio lygio",
   "englishLevel": "Anglų kalbos lygis",
   "descriptionService": "Aprašymas",
-  "skills": "Įgūdžiai"
+  "skills": "Įgūdžiai",
+
+  "yuPtitle": "Pavadinimas yra privalomas",
+  "yuPcategories": "Kategorija yra privaloma",
+  "yuPlanguage": "Kalba yra privaloma",
+  "yuPenglishlanguageLevel": "Reikia nurodyti anglų kalbos lygį",
+  "yuPlocation": "Vieta yra privaloma",
+  "yuPdescription": "Aprašymas yra privalomas",
+  "yuPprice": "Kaina yra privaloma",
+  "yuPimage": "Nuotrauka yra privaloma",
+  "yuPskills": "Bent vienas įgūdis yra privalomas",
+  "yuPmoreThanZero": "Kaina turi būti didesnė nei 0"
 }

@@ -84,5 +84,16 @@
   "basic": "基础",
   "englishLevel": "英语水平",
   "descriptionService": "描述",
-  "skills": "技能"
+  "skills": "技能",
+
+  "yuPtitle": "标题不能为空",
+  "yuPcategories": "类别不能为空",
+  "yuPlanguage": "语言不能为空",
+  "yuPenglishlanguageLevel": "需要指定英语语言水平",
+  "yuPlocation": "地点不能为空",
+  "yuPdescription": "描述不能为空",
+  "yuPprice": "价格不能为空",
+  "yuPimage": "图片不能为空",
+  "yuPskills": "至少需要一个技能",
+  "yuPmoreThanZero": "价格必须大于0"
 }

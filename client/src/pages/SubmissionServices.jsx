@@ -4,11 +4,14 @@ import { postServices } from "../api/services";
 import { useNavigate } from "react-router-dom";
 import { Field, Form, Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import styles from "./styles/SubmissionServices.module.scss";
+import { useTranslation } from "react-i18next";
 
 const SubmissionServices = () => {
   const { accessToken, userData } = useContext(UserContext);
   const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (values) => {
     try {
@@ -35,10 +38,17 @@ const SubmissionServices = () => {
     }
   };
   const listingSchemaYup = Yup.object().shape({
-    title: Yup.string().required("Title is required"),
-    categories: Yup.string().required("Category is required"),
-    description: Yup.string().required("Description is required"),
-    image: Yup.mixed().required("Image is required"),
+    title: Yup.string().required(t("yuPtitle")),
+    categories: Yup.string().required(t("yuPcategories")),
+    language: Yup.string().required(t("yuPlanguage")),
+    englishlanguageLevel: Yup.string().required(t("yuPenglishlanguageLevel")),
+    location: Yup.string().required(t("yuPlocation")),
+    description: Yup.string().required(t("yuPdescription")),
+    price: Yup.number()
+      .required(t("yuPprice"))
+      .moreThan(0, t("yuPmoreThanZero")),
+    image: Yup.mixed().required(t("yuPimage")),
+    skills: Yup.array().of(Yup.string()).min(1, t("yuPskills")),
   });
 
   return (
@@ -51,7 +61,7 @@ const SubmissionServices = () => {
         location: "",
         description: "",
         price: 0,
-        image1: "",
+        image: "",
         skills: [],
       }}
       validationSchema={listingSchemaYup}
@@ -68,15 +78,17 @@ const SubmissionServices = () => {
           <div className="form-group">
             <label htmlFor="categories">Categories</label>
             <Field as="select" name="categories">
-              <option value="">Select a category</option>
-              <option value="graphicsdesign">Graphics & Design</option>
-              <option value="digitalmarketing">Digital Marketing</option>
-              <option value="writingtranslation">Writing & Translation</option>
-              <option value="videoanimation">Video & Animation</option>
-              <option value="musicaudio">Music & Audio</option>
-              <option value="programmingtech">Programming & Tech</option>
-              <option value="data">Data</option>
-              <option value="aiservices">Ai Services</option>
+              <option value="">Select Category</option>
+              <option value="graphicsdesign">{t("graphicsdesign")}</option>
+              <option value="digitalmarketing">{t("digitalmarketing")}</option>
+              <option value="writingtranslation">
+                {t("writingtranslation")}
+              </option>
+              <option value="videoanimation">{t("videoanimation")}</option>
+              <option value="musicaudio">{t("musicaudio")}</option>
+              <option value="programmingtech">{t("programmingtech")}</option>
+              <option value="data">{t("data")}</option>
+              <option value="aiservices">{t("aiservices")}</option>
             </Field>
             <ErrorMessage name="categories" component="div" />
           </div>
@@ -145,7 +157,7 @@ const SubmissionServices = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="image">Image 1</label>
+            <label htmlFor="image">Image</label>
             <input
               type="file"
               name="image"
