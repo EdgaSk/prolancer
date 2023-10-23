@@ -1,8 +1,6 @@
 # Introduction
 
-This project is a freelance platform.
-
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project.
+This project is a freelancer platform.
 
 # Getting Started
 
