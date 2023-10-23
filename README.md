@@ -12,13 +12,14 @@ In this section, you'll find information on how to get the project up and runnin
 
 To install the necessary dependencies, run the following command:
 
-```bash
-npm install
+### Software dependencies
 
-Software dependencies
 This project uses the following software dependencies:
 
 Front-end
+
+```bash
+npm yarn add
 @emotion/react: 11.11.1
 @emotion/styled: 11.11.0
 @mui/icons-material: 5.14.13
