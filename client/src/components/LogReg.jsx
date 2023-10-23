@@ -6,6 +6,12 @@ import { useTranslation } from "react-i18next";
 import { AiOutlineUserAdd, AiOutlineLogin } from "react-icons/ai";
 import { UserContext } from "../context/UserContext";
 import { getUserbyID } from "../api/users";
+import {
+  dashBoardAdminLinks,
+  dashBoardEmployerLinks,
+  dashBoardFreelancerLinks,
+} from "../routes/constRoutes";
+import { NavLink } from "react-router-dom";
 
 const LogReg = () => {
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
@@ -13,6 +19,41 @@ const LogReg = () => {
   const { t } = useTranslation();
   const { isAuthenticated, userData, accessToken } = useContext(UserContext);
   const [userDetails, setUserDetails] = useState(null);
+  const [isDropMenuVisible, setDropMenuVisible] = useState(false);
+
+  const isFreelancer = userData.roles && userData.roles.freelancer;
+  const isEmployer = userData.roles && userData.roles.employer;
+  const isAdmin = userData.roles && userData.roles.admin;
+
+  const FreelancerDashboard = () => (
+    <>
+      {dashBoardFreelancerLinks.map((link) => (
+        <NavLink to={`/dashboard${link.path}`} key={link.path}>
+          {t(link.nameKey)}
+        </NavLink>
+      ))}
+    </>
+  );
+
+  const EmployerDashboard = () => (
+    <>
+      {dashBoardEmployerLinks.map((link) => (
+        <NavLink to={`/dashboard${link.path}`} key={link.path}>
+          {t(link.nameKey)}
+        </NavLink>
+      ))}
+    </>
+  );
+
+  const AdminDashboard = () => (
+    <>
+      {dashBoardAdminLinks.map((link) => (
+        <NavLink to={`/dashboard${link.path}`} key={link.path}>
+          {t(link.nameKey)}
+        </NavLink>
+      ))}
+    </>
+  );
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -46,12 +87,16 @@ const LogReg = () => {
     setIsLoginModalOpen(false);
   };
 
+  const toggleDropMenu = () => {
+    setDropMenuVisible(!isDropMenuVisible);
+  };
+
   return (
     <>
       {isAuthenticated ? (
         <div className={styles.logInuser}>
           {userDetails && (
-            <div className={styles.userbox}>
+            <div className={styles.userbox} onClick={toggleDropMenu}>
               <p className={styles.name}>
                 {userDetails.name}&nbsp;
                 {userDetails.surname}
@@ -61,6 +106,15 @@ const LogReg = () => {
                   <span key={index}>{t(`roles.${role}`)}</span>
                 ))}
               </p>
+            </div>
+          )}
+          {isDropMenuVisible && (
+            <div className={styles.dropMenuUser}>
+              <div className={styles.linksCointainer} onClick={toggleDropMenu}>
+                {isFreelancer && <FreelancerDashboard />}
+                {isEmployer && <EmployerDashboard />}
+                {isAdmin && <AdminDashboard />}
+              </div>
             </div>
           )}
         </div>

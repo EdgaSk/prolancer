@@ -29,13 +29,47 @@
   align-items: center;
   justify-content: center;
   margin: 0 10px;
+  cursor: pointer;
+  position: relative;
   .userbox {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 5px;
+    &:hover {
+      border: 1px solid var(--secondary-color);
+      padding: 5px;
+      border-radius: 5px;
+    }
     .name {
       font-size: 0.9rem;
       margin-bottom: -5px;
+    }
+  }
+}
+
+.dropMenuUser {
+  display: flex;
+  width: 200px;
+  position: absolute;
+  top: 52px;
+  background-color: var(--primary-color);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 10px;
+}
+
+.linksCointainer {
+  display: flex;
+  border-bottom: 1px solid var(--border-light);
+  flex-direction: column;
+  padding: 10px 15px;
+  gap: 10px;
+  a {
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: 0.9rem;
+    &:hover {
+      color: var(--secondary-color);
     }
   }
 }
