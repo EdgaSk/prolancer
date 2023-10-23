@@ -113,3 +113,5 @@ Remember to include the required tokens and follow authentication procedures for
 ## Project Preview
 
 ![Mainpage](./readme/MainPage.png)
+![Register](./readme/register.png)
+![Login](./readme/Login.png)
