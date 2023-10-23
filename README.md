@@ -14,7 +14,10 @@ To install the necessary dependencies, run the following command:
 
 #### Front-End
 
-yarn add
+- Install Node with package
+  yarn add
+- Run project
+  yarn dev
 
 #### Back-End
 
