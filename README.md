@@ -10,6 +10,12 @@ In this section, you'll find information on how to get the project up and runnin
 
 To install the necessary dependencies, run the following command:
 
+- Clone the repository to your local:
+
+```bash
+git clone https://github.com/EdgaSk/prolancer.git
+```
+
 #### Front-End
 
 - Install Node with package:
