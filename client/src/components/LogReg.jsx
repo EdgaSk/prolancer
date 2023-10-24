@@ -12,6 +12,7 @@ import {
   dashBoardFreelancerLinks,
 } from "../routes/constRoutes";
 import { NavLink } from "react-router-dom";
+import LogoutButton from "./Buttons";
 
 const LogReg = () => {
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
@@ -109,12 +110,13 @@ const LogReg = () => {
             </div>
           )}
           {isDropMenuVisible && (
-            <div className={styles.dropMenuUser}>
+            <div className={`${styles.dropMenuUser} ${styles.flexColm}`}>
               <div className={styles.linksCointainer} onClick={toggleDropMenu}>
                 {isFreelancer && <FreelancerDashboard />}
                 {isEmployer && <EmployerDashboard />}
                 {isAdmin && <AdminDashboard />}
               </div>
+              <LogoutButton />
             </div>
           )}
         </div>

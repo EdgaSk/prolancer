@@ -132,5 +132,7 @@
   "formLanguage": "语言",
   "formEnglishLevel": "英语水平",
   "formLocation": "位置",
-  "formDescription": "描述"
+  "formDescription": "描述",
+
+  "logout": "断开"
 }

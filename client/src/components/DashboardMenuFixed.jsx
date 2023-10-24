@@ -9,6 +9,7 @@ import {
 import { NavLink } from "react-router-dom";
 import { getUserbyID } from "../api/users";
 import styles from "./styles/DashboardMenuFixed.module.scss";
+import LogoutButton from "./Buttons";
 
 const DashboardMenuFixed = () => {
   const { t } = useTranslation();
@@ -88,6 +89,7 @@ const DashboardMenuFixed = () => {
           {isEmployer && <EmployerDashboard />}
           {isAdmin && <AdminDashboard />}
         </div>
+        <LogoutButton />
       </div>
     </>
   );

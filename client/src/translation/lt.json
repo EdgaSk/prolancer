@@ -132,5 +132,7 @@
   "formLanguage": "Kalba",
   "formEnglishLevel": "Anglų kalbos lygis",
   "formLocation": "Vieta",
-  "formDescription": "Aprašymas"
+  "formDescription": "Aprašymas",
+
+  "logout": "Atsijungti"
 }

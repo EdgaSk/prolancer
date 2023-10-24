@@ -15,11 +15,12 @@ import { NavLink } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
 import { useContext } from "react";
 import LogReg from "./LogReg";
+import LogoutButton from "./Buttons";
 
 const DropMenu = () => {
   const [open, setOpen] = React.useState(false);
   const { t } = useTranslation();
-  const { userData } = useContext(UserContext);
+  const { userData, isAuthenticated } = useContext(UserContext);
 
   const isFreelancer = userData.roles && userData.roles.freelancer;
   const isEmployer = userData.roles && userData.roles.employer;
@@ -95,11 +96,16 @@ const DropMenu = () => {
               </NavLink>
             ))}
           </div>
-          <div className={styles.linksCointainer}>
-            {isFreelancer && <FreelancerDashboard />}
-            {isEmployer && <EmployerDashboard />}
-            {isAdmin && <AdminDashboard />}
-          </div>
+          {isAuthenticated && (
+            <>
+              <div className={styles.linksCointainer}>
+                {isFreelancer && <FreelancerDashboard />}
+                {isEmployer && <EmployerDashboard />}
+                {isAdmin && <AdminDashboard />}
+              </div>
+              <LogoutButton />
+            </>
+          )}
         </div>
       </Drawer>
     </div>

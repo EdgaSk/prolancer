@@ -58,6 +58,11 @@
   border-radius: 10px;
 }
 
+.flexColm {
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
 .linksCointainer {
   display: flex;
   border-bottom: 1px solid var(--border-light);

@@ -15,6 +15,7 @@ import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 import { getUserbyID } from "../api/users";
 import { useEffect } from "react";
+import LogoutButton from "./Buttons";
 
 const DashboardMenuSlide = () => {
   const [open, setOpen] = useState(false);
@@ -126,6 +127,7 @@ const DashboardMenuSlide = () => {
             {isEmployer && <EmployerDashboard />}
             {isAdmin && <AdminDashboard />}
           </div>
+          <LogoutButton />
         </div>
       </Drawer>
     </div>

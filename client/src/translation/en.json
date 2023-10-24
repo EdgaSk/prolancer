@@ -132,5 +132,7 @@
   "formLanguage": "Language",
   "formEnglishLevel": "English Level",
   "formLocation": "Location",
-  "formDescription": "Description"
+  "formDescription": "Description",
+
+  "logout": "Logout"
 }
